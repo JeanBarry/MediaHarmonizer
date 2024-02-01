@@ -10,7 +10,7 @@ export function Hero({
   unorganizedDir: string;
 }>) {
   return (
-    <section className={"w-full bg-white px-8"}>
+    <section className={"absolute top-0 left-0 w-full bg-white px-8"}>
       <h1 className={"text-3xl font-bold text-center pt-10"}>Welcome to Media Harmonizer</h1>
       <p className={"text-center text-lg pt-5 px-4"}>
         This is a simple web application that allows you to organize your media files.

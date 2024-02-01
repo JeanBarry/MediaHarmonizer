@@ -6,10 +6,13 @@ export default function Home() {
   const unorganizedDir = process.env.NEXT_PUBLIC_UNORGANIZED_DIR;
 
   return (
-    <main className={"light h-full w-full"}>
-      <FirstDisplayWrapper displayKey={"hero"}>
-        <Hero organizedDir={organizedDir} unorganizedDir={unorganizedDir} />
-      </FirstDisplayWrapper>
+    <main className={"light h-full w-full relative"}>
+      {/*<FirstDisplayWrapper displayKey={"hero"}>*/}
+      {/*  <Hero organizedDir={organizedDir} unorganizedDir={unorganizedDir} />*/}
+      {/*</FirstDisplayWrapper>*/}
+      <div>
+        Hello, world!
+      </div>
     </main>
   );
 }
