@@ -1,16 +1,17 @@
 "use client";
 
 import { Button, Spacer } from "@nextui-org/react";
+import React, { SetStateAction } from "react";
 
-export function Hero({
-  organizedDir,
-  unorganizedDir,
-}: Readonly<{
+interface HeroProps {
   organizedDir: string;
   unorganizedDir: string;
-}>) {
+  setAgreement: React.Dispatch<SetStateAction<boolean>>;
+}
+
+export function Hero({ organizedDir, unorganizedDir, setAgreement }: Readonly<HeroProps>) {
   return (
-    <section className={"w-full bg-white px-8"}>
+    <section className={"absolute top-0 left-0 w-full bg-white px-8"}>
       <h1 className={"text-3xl font-bold text-center pt-10"}>Welcome to Media Harmonizer</h1>
       <p className={"text-center text-lg pt-5 px-4"}>
         This is a simple web application that allows you to organize your media files.
@@ -30,11 +31,7 @@ export function Hero({
         If not, you can change your directories in the .env file and restart the application.
       </p>
       <div className={"w-full flex justify-center py-10"}>
-        <Button
-          className={
-            "bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg font-bold p-6 px-12 w-2/3 md:w-fit"
-          }
-        >
+        <Button color={"warning"} className={"p-6 px-20 w-2/3 md:w-fit"} onClick={() => setAgreement(true)}>
           Continue
         </Button>
       </div>
